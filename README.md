@@ -14,7 +14,16 @@ Think of it as a development framework that helps you (and AI assistants) write 
 
 ## Quick Start
 
-### New Project
+### Using CarbideKlar Commands (No Setup Required)
+
+These commands work on any Klar code:
+
+```
+/klar-review path/to/file.kl    # Review code against CarbideKlar standards
+/klar-safety path/to/file.kl    # Security-focused review
+```
+
+### Creating a New Project
 
 ```bash
 # In Claude Code, run:
@@ -26,14 +35,20 @@ This creates a new project with:
 - Build configuration (build.zig)
 - CarbideKlar rules and commands
 
-### Existing Project
+### Adding to an Existing Project
 
-```bash
-# In Claude Code, run:
-/klar-install
-```
+1. **Copy the install command** to your project:
+   ```bash
+   mkdir -p .claude/commands
+   curl -o .claude/commands/klar-install.md https://raw.githubusercontent.com/PhilipLudington/CarbideKlar/main/commands/klar-install.md
+   ```
 
-This adds CarbideKlar to your existing project.
+2. **Run the install command** in Claude Code:
+   ```
+   /klar-install
+   ```
+
+This will copy CarbideKlar's rules and commands into your project's `.claude/` directory.
 
 ## Standards Overview
 
@@ -119,4 +134,4 @@ CarbideKlar is designed to evolve with Klar. Contributions welcome for:
 
 ---
 
-*CarbideKlar v0.1.0 - For Klar Phase 1 (Milestone 5)*
+*CarbideKlar v0.2.0 - For Klar Phase 1 Complete*
