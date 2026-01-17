@@ -1,8 +1,8 @@
-# CarbideKlar Quick Reference
+# Klar-Toolkit Quick Reference
 
 > For Claude Code and AI-assisted Klar development
 >
-> **Version 0.4.0** - Aligned with Klar Phase 4 (Language Completion)
+> **Version 0.4.1** - Aligned with Klar Phase 4 (Language Completion)
 
 ## Standards Location
 
@@ -90,23 +90,23 @@ Before committing:
 
 | Command | Purpose |
 |---------|---------|
-| `/klar-init` | Create new CarbideKlar project |
-| `/klar-install` | Add CarbideKlar to existing project |
+| `/klar-init` | Create new Klar-Toolkit project |
+| `/klar-install` | Add Klar-Toolkit to existing project |
 | `/klar-review` | Review code against standards |
 | `/klar-safety` | Security-focused review |
 | `/klar-check` | Run build, tests, and checks |
-| `/klar-update` | Update CarbideKlar |
+| `/klar-update` | Update Klar-Toolkit |
 
 ## Rule Categories
 
 Rules are auto-loaded from `.claude/rules/`:
-- `ownership.md` - Ownership and borrowing
-- `errors.md` - Result/Option patterns
-- `security.md` - Input validation, unsafe
-- `naming.md` - Naming conventions
-- `api-design.md` - API design patterns
-- `testing.md` - Testing standards
-- `concurrency.md` - Async, threads, channels
-- `comptime.md` - Compile-time patterns
-- `logging.md` - Logging standards
-- `portability.md` - Cross-platform
+- `klar-ownership.md` - Ownership and borrowing
+- `klar-errors.md` - Result/Option patterns
+- `klar-security.md` - Input validation, unsafe
+- `klar-naming.md` - Naming conventions
+- `klar-api-design.md` - API design patterns
+- `klar-testing.md` - Testing standards
+- `klar-concurrency.md` - Async, threads, channels
+- `klar-comptime.md` - Compile-time patterns
+- `klar-logging.md` - Logging standards
+- `klar-portability.md` - Cross-platform

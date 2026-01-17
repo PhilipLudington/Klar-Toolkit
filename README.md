@@ -1,10 +1,10 @@
-# CarbideKlar
+# Klar-Toolkit
 
 Hardened Klar development standards and patterns for safe, consistent, and maintainable code. Designed to work with Claude Code/AI and agentic development.
 
-## What is CarbideKlar?
+## What is Klar-Toolkit?
 
-CarbideKlar provides:
+Klar-Toolkit provides:
 - **Coding standards** for writing safe, idiomatic Klar code
 - **Claude Code rules** that guide AI-assisted development
 - **Slash commands** for code review, project setup, and validation
@@ -14,13 +14,13 @@ Think of it as a development framework that helps you (and AI assistants) write 
 
 ## Quick Start
 
-### 1. Install CarbideKlar
+### 1. Install Klar-Toolkit
 
 Run these two commands in your project directory:
 
 ```bash
 mkdir -p .claude/commands
-curl -o .claude/commands/klar-install.md https://raw.githubusercontent.com/PhilipLudington/CarbideKlar/main/commands/klar-install.md
+curl -o .claude/commands/klar-install.md https://raw.githubusercontent.com/PhilipLudington/Klar-Toolkit/main/commands/klar-install.md
 ```
 
 Then in Claude Code, run:
@@ -28,7 +28,7 @@ Then in Claude Code, run:
 /klar-install
 ```
 
-This installs CarbideKlar with all rules, commands, and documentation.
+This installs Klar-Toolkit with all rules, commands, and documentation.
 
 ### 2. Use the Commands
 
@@ -38,12 +38,12 @@ After installation, these commands are available:
 /klar-review src/main.kl    # Review code against standards
 /klar-safety src/main.kl    # Security-focused review
 /klar-check                 # Run build, tests, and validation
-/klar-init my_project       # Create a new CarbideKlar project
+/klar-init my_project       # Create a new Klar-Toolkit project
 ```
 
 ### 3. Update Existing Installation
 
-To update CarbideKlar to the latest version:
+To update Klar-Toolkit to the latest version:
 
 ```
 /klar-update
@@ -53,7 +53,7 @@ This fetches the latest version and updates all rules and commands while optiona
 
 ### Creating New Projects
 
-To create a new project with CarbideKlar already configured:
+To create a new project with Klar-Toolkit already configured:
 
 ```
 /klar-init my_project
@@ -61,16 +61,15 @@ To create a new project with CarbideKlar already configured:
 
 This creates:
 - Standard directory structure (`src/`, `tests/`)
-- Build configuration (build.zig)
-- CarbideKlar rules and commands pre-installed
+- Klar-Toolkit rules and commands pre-installed
 
 ### Note: Submodules
 
-If your project includes submodules that also use CarbideKlar, there's no conflict. Claude Code uses the `.claude/` directory at the **git root**, so only the parent project's commands and rules are active.
+If your project includes submodules that also use Klar-Toolkit, there's no conflict. Claude Code uses the `.claude/` directory at the **git root**, so only the parent project's commands and rules are active.
 
 ## Standards Overview
 
-CarbideKlar enforces standards in these areas:
+Klar-Toolkit enforces standards in these areas:
 
 | Category | Key Points |
 |----------|------------|
@@ -89,19 +88,19 @@ See [STANDARDS.md](STANDARDS.md) for complete standards.
 
 | Command | Description |
 |---------|-------------|
-| `/klar-init` | Create a new CarbideKlar project |
-| `/klar-install` | Add CarbideKlar to existing project |
+| `/klar-init` | Create a new Klar-Toolkit project |
+| `/klar-install` | Add Klar-Toolkit to existing project |
 | `/klar-review` | Review code against standards |
 | `/klar-safety` | Security-focused code review |
 | `/klar-check` | Run build, tests, and validation |
-| `/klar-update` | Update to latest CarbideKlar |
+| `/klar-update` | Update to latest Klar-Toolkit |
 
 ## Project Structure
 
 ```
-CarbideKlar/
+Klar-Toolkit/
 ├── STANDARDS.md          # Complete coding standards
-├── CARBIDEKLAR.md        # Quick reference
+├── KLARTOOLKIT.md        # Quick reference
 ├── commands/             # Slash command definitions
 ├── rules/                # Claude Code rules (auto-loaded)
 ├── templates/            # Project templates
@@ -110,7 +109,7 @@ CarbideKlar/
     └── security/         # Security guidance
 ```
 
-## Why CarbideKlar?
+## Why Klar-Toolkit?
 
 Klar is designed to be safe by default, but standards help ensure:
 
@@ -121,7 +120,7 @@ Klar is designed to be safe by default, but standards help ensure:
 
 ## For Claude Code Users
 
-CarbideKlar rules are automatically loaded when working in a CarbideKlar project. The rules guide Claude to:
+Klar-Toolkit rules are automatically loaded when working in a Klar-Toolkit project. The rules guide Claude to:
 
 - Follow Klar naming conventions
 - Use proper error handling patterns
@@ -131,9 +130,9 @@ CarbideKlar rules are automatically loaded when working in a CarbideKlar project
 
 ## Alignment with Klar
 
-CarbideKlar is designed to complement Klar's built-in safety:
+Klar-Toolkit is designed to complement Klar's built-in safety:
 
-| Klar Provides | CarbideKlar Adds |
+| Klar Provides | Klar-Toolkit Adds |
 |---------------|------------------|
 | Ownership system | Ownership patterns and idioms |
 | Result/Option types | Error handling conventions |
@@ -150,11 +149,11 @@ MIT License - see [LICENSE](LICENSE)
 
 ## Contributing
 
-CarbideKlar is designed to evolve with Klar. Contributions welcome for:
+Klar-Toolkit is designed to evolve with Klar. Contributions welcome for:
 - Additional patterns and examples
 - Improved command functionality
 - Bug fixes and clarifications
 
 ---
 
-*CarbideKlar v0.4.0 - For Klar Phase 4 (Language Completion)*
+*Klar-Toolkit v0.4.1 - For Klar Phase 4 (Language Completion)*

@@ -20,17 +20,16 @@ Runs the complete validation pipeline:
 
 When the user runs `/klar-check`:
 
-1. **Detect build system**:
-   - Look for `build.zig` (Zig build)
-   - Look for `Makefile` (Make build)
-   - If neither found, report error
+1. **Detect project**:
+   - Look for `src/` directory with `.kl` files
+   - If not found, report error
 
 2. **Run validation steps**:
 
 ### Step 1: Build Check
 
 ```bash
-zig build
+klar build src/main.kl
 ```
 
 Report:
@@ -41,17 +40,17 @@ Report:
 ### Step 2: Format Check
 
 ```bash
-zig fmt --check src/
+klar fmt --check src/
 ```
 
 Report:
 - Files that need formatting
-- Suggest: `zig fmt src/` to fix
+- Suggest: `klar fmt src/` to fix
 
 ### Step 3: Run Tests
 
 ```bash
-zig build test
+klar test tests/
 ```
 
 Report:
@@ -62,7 +61,7 @@ Report:
 3. **Generate report**:
 
 ```
-# CarbideKlar Check Report
+# Klar-Toolkit Check Report
 
 ## Build
 ✓ Compilation successful
@@ -72,7 +71,7 @@ Report:
 ## Format
 ✗ Format check failed
   - 3 files need formatting
-  - Run `zig fmt src/` to fix
+  - Run `klar fmt src/` to fix
 
 ## Tests
 ✓ All tests passed
@@ -128,11 +127,11 @@ overall: FAIL
 ## Common Issues
 
 ### Build fails with "file not found"
-- Check `build.zig` paths match actual file locations
+- Check that the file path is correct
 - Ensure all imported modules exist
 
 ### Format check fails
-- Run `zig fmt src/` to auto-format
+- Run `klar fmt src/` to auto-format
 - Consider adding pre-commit hook
 
 ### Tests fail

@@ -123,7 +123,7 @@ exec("convert", [validated_filename])
 3. **Generate security report**:
 
 ```
-# CarbideKlar Security Review
+# Klar-Toolkit Security Review
 
 ## Summary
 - Files reviewed: N

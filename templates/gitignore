@@ -1,7 +1,6 @@
-# Zig build artifacts
-zig-cache/
-zig-out/
-.zig-cache/
+# Build artifacts
+build/
+out/
 
 # Object files
 *.o

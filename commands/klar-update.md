@@ -1,6 +1,6 @@
 # /klar-update
 
-Update CarbideKlar to the latest version.
+Update Klar-Toolkit to the latest version.
 
 ## Usage
 
@@ -10,8 +10,8 @@ Update CarbideKlar to the latest version.
 
 ## What This Command Does
 
-1. Fetches latest CarbideKlar from repository
-2. Updates rules, commands, and documentation
+1. Fetches latest Klar-Toolkit from repository
+2. Updates rules and commands
 3. Preserves any local customizations (optional backup)
 
 ## Instructions for Claude
@@ -20,7 +20,7 @@ When the user runs `/klar-update`:
 
 ### 1. Check current installation
 
-Verify CarbideKlar is installed:
+Verify Klar-Toolkit is installed:
 
 ```bash
 ls .claude/rules/ .claude/commands/
@@ -28,13 +28,13 @@ ls .claude/rules/ .claude/commands/
 
 If directories don't exist, suggest `/klar-install` instead:
 ```
-CarbideKlar is not installed. Run /klar-install first.
+Klar-Toolkit is not installed. Run /klar-install first.
 ```
 
 ### 2. Offer backup (ask user)
 
 ```
-Found existing CarbideKlar installation.
+Found existing Klar-Toolkit installation.
 Do you want to backup current rules before updating? [Y/n]
 ```
 
@@ -44,31 +44,26 @@ cp -r .claude/rules .claude/rules.backup.$(date +%Y%m%d)
 cp -r .claude/commands .claude/commands.backup.$(date +%Y%m%d)
 ```
 
-### 3. Fetch latest CarbideKlar
+### 3. Fetch latest Klar-Toolkit
 
 Remove old version and clone fresh:
 
 ```bash
-rm -rf carbideklar
-git clone https://github.com/PhilipLudington/CarbideKlar.git carbideklar
-rm -rf carbideklar/.git
+rm -rf klar-toolkit
+git clone https://github.com/PhilipLudington/Klar-Toolkit.git klar-toolkit
+rm -rf klar-toolkit/.git
 ```
 
 ### 4. Copy updated files
 
-Copy all CarbideKlar integration files:
+Copy all Klar-Toolkit integration files:
 
 ```bash
 # Commands
-cp carbideklar/commands/*.md .claude/commands/
+cp klar-toolkit/commands/*.md .claude/commands/
 
 # Rules
-cp carbideklar/rules/*.md .claude/rules/
-
-# Documentation (create dirs if needed)
-mkdir -p .claude/docs/patterns .claude/docs/security
-cp -r carbideklar/docs/patterns/*.md .claude/docs/patterns/
-cp -r carbideklar/docs/security/*.md .claude/docs/security/
+cp klar-toolkit/rules/*.md .claude/rules/
 ```
 
 ### 5. Update version tracking
@@ -76,36 +71,36 @@ cp -r carbideklar/docs/security/*.md .claude/docs/security/
 Create/update version file:
 
 ```bash
-echo "0.4.0" > .claude/carbideklar-version
+echo "0.4.1" > .claude/klar-toolkit-version
 ```
 
 ### 6. Show update report
 
 ```markdown
-# CarbideKlar Update Complete
+# Klar-Toolkit Update Complete
 
-**Updated to:** v0.4.0 (Phase 4 - Language Completion)
+**Updated to:** v0.4.1 (Phase 4 - Language Completion)
 
 ## Updated Files
 
 ### Rules
-- api-design.md: Updated (generics, trait implementation)
-- concurrency.md: Updated (async/await, channels, select)
-- errors.md: Updated (try blocks, error conversion)
-- ownership.md: Updated (Drop trait, smart pointers)
-- traits.md: NEW (trait patterns and builtin traits)
-- naming.md, security.md, testing.md, comptime.md, logging.md, portability.md
+- klar-api-design.md: Updated (generics, trait implementation)
+- klar-concurrency.md: Updated (async/await, channels, select)
+- klar-errors.md: Updated (try blocks, error conversion)
+- klar-ownership.md: Updated (Drop trait, smart pointers)
+- klar-traits.md: NEW (trait patterns and builtin traits)
+- klar-naming.md, klar-security.md, klar-testing.md, klar-comptime.md, klar-logging.md, klar-portability.md
 
 ### Commands
 - klar-init.md: Updated (Phase 4 syntax)
 - klar-install.md, klar-review.md, klar-safety.md, klar-check.md, klar-update.md
 
-### Documentation
-- docs/patterns/generics.md: NEW (generic programming patterns)
-- docs/patterns/ownership.md, api-design.md, errors.md, resources.md
-- docs/security/unsafe-blocks.md, injection.md, validation.md
+### Documentation (in klar-toolkit/docs/)
+- patterns/generics.md: NEW (generic programming patterns)
+- patterns/ownership.md, api-design.md, errors.md, resources.md
+- security/unsafe-blocks.md, injection.md, validation.md
 
-## What's New in v0.4.0
+## What's New in v0.4.1
 
 - **Generics**: Generic functions, structs, enums with trait bounds
 - **Traits**: Builtin traits (Eq, Ordered, Clone, Drop), custom implementations
@@ -119,8 +114,7 @@ echo "0.4.0" > .claude/carbideklar-version
 ```bash
 ls .claude/rules/
 ls .claude/commands/
-ls .claude/docs/patterns/
-cat .claude/carbideklar-version
+cat .claude/klar-toolkit-version
 ```
 
 Confirm all files present and version is correct.
@@ -159,5 +153,6 @@ fi
 
 | Version | Klar Phase | Key Features |
 |---------|------------|--------------|
+| 0.4.1 | Phase 4 | Renamed to Klar-Toolkit, use native klar commands |
 | 0.4.0 | Phase 4 | Generics, traits, async/await, explicit syntax |
 | 0.2.0 | Phase 1 | Initial release, ownership, errors, security |

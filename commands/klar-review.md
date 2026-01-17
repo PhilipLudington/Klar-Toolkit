@@ -1,6 +1,6 @@
 # /klar-review
 
-Review Klar code against CarbideKlar standards.
+Review Klar code against Klar-Toolkit standards.
 
 ## Usage
 
@@ -75,7 +75,7 @@ When the user runs `/klar-review`:
 3. **Generate report**:
 
 ```
-# CarbideKlar Review Report
+# Klar-Toolkit Review Report
 
 ## Summary
 - Files reviewed: N

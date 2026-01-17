@@ -1,10 +1,10 @@
-# CarbideKlar Coding Standards
+# Klar-Toolkit Coding Standards
 
 > Hardened Klar development standards for safe, consistent, and maintainable code.
 
 These standards define unambiguous, enforceable rules for writing Klar code. They are designed to work with AI-assisted development (Claude Code) and provide clear guidance for both humans and AI to follow.
 
-**Version**: 0.4.0 (aligned with Klar Phase 4 - Language Completion)
+**Version**: 0.4.1 (aligned with Klar Phase 4 - Language Completion)
 
 ---
 
@@ -759,7 +759,6 @@ project/
 ├── tests/
 │   ├── test_module_a.kl
 │   └── test_module_b.kl
-├── build.zig             # Build configuration
 └── README.md
 ```
 
@@ -1287,4 +1286,4 @@ Before committing code, verify:
 
 ---
 
-*CarbideKlar Standards v0.4.0 - Aligned with Klar Phase 4 (Language Completion)*
+*Klar-Toolkit Standards v0.4.1 - Aligned with Klar Phase 4 (Language Completion)*

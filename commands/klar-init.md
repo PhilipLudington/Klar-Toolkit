@@ -1,6 +1,6 @@
 # /klar-init
 
-Create a new CarbideKlar-compliant Klar project.
+Create a new Klar-Toolkit-compliant Klar project.
 
 ## Usage
 
@@ -11,9 +11,8 @@ Create a new CarbideKlar-compliant Klar project.
 ## What This Command Does
 
 1. Creates project directory structure
-2. Generates starter files following CarbideKlar standards
-3. Sets up build configuration
-4. Installs CarbideKlar rules and commands
+2. Generates starter files following Klar-Toolkit standards
+3. Installs Klar-Toolkit rules and commands
 
 ## Generated Structure
 
@@ -24,12 +23,11 @@ Create a new CarbideKlar-compliant Klar project.
 │   └── lib.kl           # Library root (if library)
 ├── tests/
 │   └── test_lib.kl      # Example test
-├── build.zig            # Zig build configuration
 ├── README.md            # Project readme
 ├── .gitignore           # Git ignore patterns
 └── .claude/
-    ├── commands/        # CarbideKlar commands
-    └── rules/           # CarbideKlar rules
+    ├── commands/        # Klar-Toolkit commands
+    └── rules/           # Klar-Toolkit rules
 ```
 
 ## Instructions for Claude
@@ -100,40 +98,7 @@ fn test_create_with_defaults() {
 }
 ```
 
-5. **Generate build.zig**:
-```zig
-const std = @import("std");
-
-pub fn build(b: *std.Build) void {
-    const target = b.standardTargetOptions(.{});
-    const optimize = b.standardOptimizeOption(.{});
-
-    // Main executable
-    const exe = b.addExecutable(.{
-        .name = "<name>",
-        .root_source_file = b.path("src/main.kl"),
-        .target = target,
-        .optimize = optimize,
-    });
-    b.installArtifact(exe);
-
-    // Run command
-    const run_cmd = b.addRunArtifact(exe);
-    const run_step = b.step("run", "Run the application");
-    run_step.dependOn(&run_cmd.step);
-
-    // Tests
-    const tests = b.addTest(.{
-        .root_source_file = b.path("tests/test_lib.kl"),
-        .target = target,
-        .optimize = optimize,
-    });
-    const test_step = b.step("test", "Run unit tests");
-    test_step.dependOn(&b.addRunArtifact(tests).step);
-}
-```
-
-6. **Generate README.md**:
+5. **Generate README.md**:
 ```markdown
 # <name>
 
@@ -162,22 +127,27 @@ klar test tests/
 [License]
 ```
 
-7. **Generate .gitignore**:
+6. **Generate .gitignore**:
 ```
-zig-cache/
-zig-out/
-.zig-cache/
+# Build artifacts
+build/
+out/
 *.o
 *.a
 *.ll
 *.s
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
 ```
 
-8. **Copy CarbideKlar files**:
-   - Copy all files from CarbideKlar/commands/ to .claude/commands/
-   - Copy all files from CarbideKlar/rules/ to .claude/rules/
+7. **Copy Klar-Toolkit files**:
+   - Copy all files from Klar-Toolkit/commands/ to .claude/commands/
+   - Copy all files from Klar-Toolkit/rules/ to .claude/rules/
 
-9. **Report completion**:
+8. **Report completion**:
    - Show created file structure
    - Suggest next steps: `cd <name> && klar build src/main.kl -o <name>`
 
