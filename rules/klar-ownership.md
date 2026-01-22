@@ -4,6 +4,8 @@ globs: ["**/*.kl"]
 
 # Ownership and Borrowing Rules
 
+> Full reference: [deps/Klar-Reference/REFERENCE.md#7-ownership-and-borrowing](deps/Klar-Reference/REFERENCE.md#7-ownership-and-borrowing)
+
 ## Ownership Fundamentals
 
 Every value in Klar has exactly one owner. When writing code:

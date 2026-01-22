@@ -4,6 +4,8 @@ globs: ["**/*.kl"]
 
 # Traits Rules
 
+> Full reference: [deps/Klar-Reference/REFERENCE.md#10-traits](deps/Klar-Reference/REFERENCE.md#10-traits)
+
 ## Trait Definition
 
 Define focused traits with clear purposes:

@@ -4,9 +4,9 @@
 >
 > **Version 0.4.1** - Aligned with Klar Phase 4 (Language Completion)
 
-## Standards Location
+## Language Reference
 
-Full standards: `STANDARDS.md`
+Full reference: `deps/Klar-Reference/REFERENCE.md`
 
 ## Key Rules
 

@@ -4,6 +4,8 @@ globs: ["**/*.kl"]
 
 # Compile-Time Programming Rules
 
+> Full reference: [deps/Klar-Reference/REFERENCE.md#13-compile-time-programming](deps/Klar-Reference/REFERENCE.md#13-compile-time-programming)
+
 Klar uses `comptime` instead of preprocessor macros.
 
 ## Comptime Blocks

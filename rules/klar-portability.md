@@ -4,6 +4,8 @@ globs: ["**/*.kl"]
 
 # Portability Rules
 
+> Full reference: [deps/Klar-Reference/REFERENCE.md#3-types](deps/Klar-Reference/REFERENCE.md#3-types)
+
 ## Integer Types
 
 **P1**: Use fixed-width types for data structures:

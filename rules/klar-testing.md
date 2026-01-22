@@ -4,6 +4,8 @@ globs: ["**/*.kl", "**/tests/**"]
 
 # Testing Rules
 
+> Full reference: [deps/Klar-Reference/REFERENCE.md#15-common-patterns](deps/Klar-Reference/REFERENCE.md#15-common-patterns)
+
 ## Test Organization
 
 **T1**: One test file per module: `tests/test_<module>.kl`

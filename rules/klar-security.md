@@ -4,6 +4,8 @@ globs: ["**/*.kl"]
 
 # Security Rules
 
+> Full reference: [deps/Klar-Reference/REFERENCE.md#16-security-guidelines](deps/Klar-Reference/REFERENCE.md#16-security-guidelines)
+
 ## Input Validation
 
 **S1**: Validate ALL external input before use:

@@ -1,16 +1,15 @@
 # Klar-Toolkit
 
-Hardened Klar development standards and patterns for safe, consistent, and maintainable code. Designed to work with Claude Code/AI and agentic development.
+Claude Code integration for Klar development. Rules, commands, and workflows for AI-assisted Klar programming.
 
 ## What is Klar-Toolkit?
 
 Klar-Toolkit provides:
-- **Coding standards** for writing safe, idiomatic Klar code
 - **Claude Code rules** that guide AI-assisted development
 - **Slash commands** for code review, project setup, and validation
-- **Pattern documentation** for common problems
+- **Quick reference** for Klar coding standards
 
-Think of it as a development framework that helps you (and AI assistants) write better Klar code.
+For the complete language reference, see [Klar-Reference](https://github.com/PhilipLudington/Klar-Reference).
 
 ## Quick Start
 
@@ -28,7 +27,7 @@ Then in Claude Code, run:
 /klar-install
 ```
 
-This installs Klar-Toolkit with all rules, commands, and documentation.
+This installs Klar-Toolkit with all rules, commands, and the Klar-Reference submodule.
 
 ### 2. Use the Commands
 
@@ -67,23 +66,6 @@ This creates:
 
 If your project includes submodules that also use Klar-Toolkit, there's no conflict. Claude Code uses the `.claude/` directory at the **git root**, so only the parent project's commands and rules are active.
 
-## Standards Overview
-
-Klar-Toolkit enforces standards in these areas:
-
-| Category | Key Points |
-|----------|------------|
-| **Naming** | `PascalCase` types, `snake_case` functions |
-| **Ownership** | Clear ownership, explicit borrowing |
-| **Errors** | `Result[T, E]` for fallible operations |
-| **Generics** | Trait bounds, monomorphization |
-| **Traits** | Builtin traits (Eq, Ordered, Clone, Drop) |
-| **Security** | Input validation, bounds checking |
-| **Testing** | Tests for all public functions |
-| **Documentation** | Document all public APIs |
-
-See [STANDARDS.md](STANDARDS.md) for complete standards.
-
 ## Commands
 
 | Command | Description |
@@ -99,15 +81,39 @@ See [STANDARDS.md](STANDARDS.md) for complete standards.
 
 ```
 Klar-Toolkit/
-├── STANDARDS.md          # Complete coding standards
-├── KLARTOOLKIT.md        # Quick reference
-├── commands/             # Slash command definitions
-├── rules/                # Claude Code rules (auto-loaded)
-├── templates/            # Project templates
-└── docs/
-    ├── patterns/         # Design pattern guides
-    └── security/         # Security guidance
+├── KLARTOOLKIT.md            # Quick reference for Claude Code
+├── commands/                 # Slash command definitions
+├── rules/                    # Claude Code rules (auto-loaded)
+├── templates/                # Project templates
+└── deps/
+    └── Klar-Reference/       # Complete language reference (submodule)
+        └── REFERENCE.md
 ```
+
+## Related Projects
+
+| Project | Purpose |
+|---------|---------|
+| [Klar-Reference](https://github.com/PhilipLudington/Klar-Reference) | Model-agnostic language reference |
+| [MCP-Klar](https://github.com/PhilipLudington/MCP-Klar) | Model Context Protocol server for Klar |
+
+## Rules (11)
+
+Rules are automatically loaded when working in a Klar-Toolkit project:
+
+| Rule | Focus |
+|------|-------|
+| klar-naming | Case conventions, prefixes |
+| klar-ownership | Borrowing, smart pointers |
+| klar-errors | Result/Option patterns |
+| klar-security | Input validation, unsafe |
+| klar-api-design | Functions, traits, generics |
+| klar-testing | Test organization, coverage |
+| klar-concurrency | Async, threads, channels |
+| klar-traits | Trait implementation |
+| klar-comptime | Compile-time programming |
+| klar-logging | Log levels, structured logs |
+| klar-portability | Cross-platform concerns |
 
 ## Why Klar-Toolkit?
 
@@ -118,41 +124,9 @@ Klar is designed to be safe by default, but standards help ensure:
 3. **AI-friendliness** - Unambiguous rules that AI can follow
 4. **Best practices** - Guidance beyond what the compiler enforces
 
-## For Claude Code Users
-
-Klar-Toolkit rules are automatically loaded when working in a Klar-Toolkit project. The rules guide Claude to:
-
-- Follow Klar naming conventions
-- Use proper error handling patterns
-- Write secure, validated code
-- Create comprehensive tests
-- Document public APIs
-
-## Alignment with Klar
-
-Klar-Toolkit is designed to complement Klar's built-in safety:
-
-| Klar Provides | Klar-Toolkit Adds |
-|---------------|------------------|
-| Ownership system | Ownership patterns and idioms |
-| Result/Option types | Error handling conventions |
-| Generics with monomorphization | Generic programming patterns |
-| Trait system (Eq, Ordered, Clone, Drop) | Trait implementation patterns |
-| Bounds checking | Input validation discipline |
-| No undefined behavior | Security best practices |
-| Module system | API design patterns |
-| Async/await | Concurrency patterns |
-
 ## License
 
 MIT License - see [LICENSE](LICENSE)
-
-## Contributing
-
-Klar-Toolkit is designed to evolve with Klar. Contributions welcome for:
-- Additional patterns and examples
-- Improved command functionality
-- Bug fixes and clarifications
 
 ---
 

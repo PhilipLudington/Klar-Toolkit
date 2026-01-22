@@ -4,6 +4,8 @@ globs: ["**/*.kl"]
 
 # Naming Conventions
 
+> Full reference: [deps/Klar-Reference/REFERENCE.md#2-syntax-fundamentals](deps/Klar-Reference/REFERENCE.md#2-syntax-fundamentals)
+
 ## Case Conventions
 
 | Element | Convention | Example |

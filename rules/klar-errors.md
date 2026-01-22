@@ -4,6 +4,8 @@ globs: ["**/*.kl"]
 
 # Error Handling Rules
 
+> Full reference: [deps/Klar-Reference/REFERENCE.md#8-error-handling](deps/Klar-Reference/REFERENCE.md#8-error-handling)
+
 ## Result and Option Types
 
 All fallible operations MUST return `Result[T, E]`:

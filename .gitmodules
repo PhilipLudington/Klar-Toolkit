@@ -1,0 +1,3 @@
+[submodule "deps/Klar-Reference"]
+	path = deps/Klar-Reference
+	url = https://github.com/PhilipLudington/Klar-Reference.git

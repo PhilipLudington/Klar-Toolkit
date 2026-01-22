@@ -4,6 +4,8 @@ globs: ["**/*.kl"]
 
 # Logging Rules
 
+> Full reference: [deps/Klar-Reference/REFERENCE.md#16-security-guidelines](deps/Klar-Reference/REFERENCE.md#16-security-guidelines)
+
 ## Log Levels
 
 | Level | Use For |

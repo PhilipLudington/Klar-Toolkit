@@ -4,6 +4,8 @@ globs: ["**/*.kl"]
 
 # Concurrency Rules
 
+> Full reference: [deps/Klar-Reference/REFERENCE.md#12-concurrency](deps/Klar-Reference/REFERENCE.md#12-concurrency)
+
 ## Thread Safety Documentation
 
 **C1**: Document thread safety of every public type:

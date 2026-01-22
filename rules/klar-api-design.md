@@ -4,6 +4,8 @@ globs: ["**/*.kl"]
 
 # API Design Rules
 
+> Full reference: [deps/Klar-Reference/REFERENCE.md#5-functions](deps/Klar-Reference/REFERENCE.md#5-functions)
+
 ## Function Parameters
 
 **A1**: Maximum 4 parameters. Use config structs for more:
