@@ -31,10 +31,13 @@ After installation, these commands are available in Claude Code:
 
 | Command | Description |
 |---------|-------------|
+| `/klar-run` | Execute a Klar program |
+| `/klar-build` | Compile to native executable |
+| `/klar-test` | Run test files |
+| `/klar-check` | Run build, tests, and validation |
 | `/klar-init` | Create a new Klar project |
 | `/klar-review` | Review code against standards |
 | `/klar-safety` | Security-focused code review |
-| `/klar-check` | Run build, tests, and validation |
 
 ## Documentation
 
@@ -69,7 +72,3 @@ Rules are automatically loaded when working with `.kl` files:
 ## License
 
 MIT
-
----
-
-*Klar-Toolkit v0.1.0*

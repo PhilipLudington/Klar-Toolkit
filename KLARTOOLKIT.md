@@ -2,7 +2,7 @@
 
 > For Claude Code and AI-assisted Klar development
 >
-> **Version 0.1.0**
+> Run `klar --version` for compiler version
 
 ## Language Reference
 
@@ -90,10 +90,13 @@ Before committing:
 
 | Command | Purpose |
 |---------|---------|
+| `/klar-run` | Execute a Klar program |
+| `/klar-build` | Compile to native executable |
+| `/klar-test` | Run test files |
+| `/klar-check` | Run build, tests, and checks |
 | `/klar-init` | Create new Klar project |
 | `/klar-review` | Review code against standards |
 | `/klar-safety` | Security-focused review |
-| `/klar-check` | Run build, tests, and checks |
 
 ## Rule Categories
 
